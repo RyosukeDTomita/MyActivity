@@ -7,12 +7,11 @@ import { Github, ExternalLink, Mail, MapPin, Calendar, Book, Presentation, Linke
 // プロフィール情報をここで編集してください
 const profile = {
   name: "Ryosuke Tomita(sigma)",
-  title: "Software Engineer",
-  description: "フルスタック開発者として、React、Next.js、TypeScriptを使用してWebアプリケーションを開発しています。新しい技術に興味があり、常に学習を続けています。",
+  title: "Security Engineer",
+  description: "NRI SecureTechnologies でセキュリティエンジニアとして活動。DevSecOps、セキュリティ診断、生成AI活用推進に従事。Qiitaに100件以上の技術記事を投稿し、勉強会でのLTも実施。",
   location: "Tokyo, Japan",
-  email: "your.email@example.com",
   avatar: "/images/placeholder.svg", // ここを実際の画像パスに変更してください
-  joinDate: "2020年",
+  joinDate: "2022年",
   links: [
     {
       name: "GitHub",
@@ -46,21 +45,29 @@ const profile = {
     }
   ],
   skills: [
-    "JavaScript", "TypeScript", "React", "Next.js", "Node.js", 
-    "Python", "Docker", "AWS", "Git", "PostgreSQL"
+    "AI Agents", "Test-Driven Development", "DevSecOps", "Vulnerability Scanning",
+    "Agile Application Development", "Amazon Web Services (AWS)", "Shell Scripting",
+    "Python (Programming Language)", "TypeScript", "Java",
+    "Continuous Integration and Continuous Delivery (CI/CD)", "Docker Products"
   ],
   experiences: [
     {
-      title: "Senior Software Engineer",
-      company: "株式会社Example",
-      period: "2022年 - 現在",
-      description: "Webアプリケーションの設計・開発・運用を担当"
+      title: "Shift->eft (Security Engineer)",
+      company: "NRI SecureTechnologies (出向: 野村総合研究所)",
+      period: "2025年4月 - 現在",
+      description: "各種セキュリティ診断、生成AI活用"
     },
     {
-      title: "Software Engineer", 
-      company: "株式会社Sample",
-      period: "2020年 - 2022年",
-      description: "フロントエンド開発とAPIの開発を担当"
+      title: "DevSecOps (Security Engineer)", 
+      company: "NRI SecureTechnologies (出向: 野村総合研究所)",
+      period: "2023年4月 - 2025年3月",
+      description: "認証基盤のSI開発でPM兼開発者としてプロジェクトを推進。各種セキュリティ診断、セキュリティレビュー，セキュリティ技術研修講師を実施。"
+    },
+    {
+      title: "Network Operations(Security Engineer)",
+      company: "NRI SecureTechnologies (出向: 野村総合研究所)",
+      period: "2022年4月 - 2023年3月",
+      description: "顧客ネットワーク機器の運用保守業務を担当。Crowd Strike導入支援、SRX・BIG-IPのバージョンアップ対応、Shell Scriptを用いたログ調査・分析を実施。"
     }
   ]
 };
