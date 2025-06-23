@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Mail, MapPin, Calendar, Book, Presentation } from "lucide-react";
+import { Github, ExternalLink, Mail, MapPin, Calendar, Book, Presentation, Linkedin } from "lucide-react";
 
 // プロフィール情報をここで編集してください
 const profile = {
-  name: "あなたの名前",
+  name: "Ryosuke Tomita(sigma)",
   title: "Software Engineer",
   description: "フルスタック開発者として、React、Next.js、TypeScriptを使用してWebアプリケーションを開発しています。新しい技術に興味があり、常に学習を続けています。",
   location: "Tokyo, Japan",
@@ -16,27 +16,33 @@ const profile = {
   links: [
     {
       name: "GitHub",
-      url: "https://github.com/yourusername",
+      url: "https://github.com/RyosukeDTomita",
       icon: Github,
       description: "ソースコードとプロジェクト"
     },
     {
       name: "Qiita",
-      url: "https://qiita.com/yourusername", 
+      url: "https://qiita.com/sigma_devsecops", 
       icon: Book,
       description: "技術記事とナレッジ"
     },
     {
       name: "Zenn",
-      url: "https://zenn.dev/yourusername",
+      url: "https://zenn.dev/sigma_tom",
       icon: ExternalLink,
       description: "技術記事とスクラップ"
     },
     {
       name: "Speaker Deck",
-      url: "https://speakerdeck.com/yourusername",
+      url: "https://speakerdeck.com/ryosukedtomita",
       icon: Presentation,
       description: "プレゼンテーション資料"
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/tomita-ryosuke-a08a82255/",
+      icon: Linkedin,
+      description: "プロフェッショナルネットワーク"
     }
   ],
   skills: [
