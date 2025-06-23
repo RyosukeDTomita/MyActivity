@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Mail, MapPin, Calendar, Book, Presentation, Linkedin } from "lucide-react";
+import { Github, ExternalLink, MapPin, Calendar, Book, Presentation, Linkedin } from "lucide-react";
 
 // プロフィール情報をここで編集してください
 const profile = {
