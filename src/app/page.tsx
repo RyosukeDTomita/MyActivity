@@ -2,15 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Mail, MapPin, Calendar, Book, Presentation } from "lucide-react";
+import { Github, ExternalLink, Mail, MapPin, Calendar, Book, Presentation, Linkedin } from "lucide-react";
 
 // プロフィール情報をここで編集してください
 const profile = {
-  name: "富田 涼介 (Ryosuke Tomita)",
-  title: "DevSecOps Engineer / Security Consultant",
+  name: "Ryosuke Tomita(sigma)",
+  title: "Security Engineer",
   description: "NRI SecureTechnologies でセキュリティエンジニアとして活動。DevSecOps、セキュリティ診断、生成AI活用推進に従事。Qiitaに100件以上の技術記事を投稿し、勉強会でのLTも実施。",
   location: "Tokyo, Japan",
-  email: "your.email@example.com",
   avatar: "/images/placeholder.svg", // ここを実際の画像パスに変更してください
   joinDate: "2022年",
   links: [
@@ -27,10 +26,22 @@ const profile = {
       description: "技術記事とナレッジ"
     },
     {
+      name: "Zenn",
+      url: "https://zenn.dev/sigma_tom",
+      icon: ExternalLink,
+      description: "技術記事とスクラップ"
+    },
+    {
       name: "Speaker Deck",
       url: "https://speakerdeck.com/ryosukedtomita",
       icon: Presentation,
       description: "プレゼンテーション資料"
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/tomita-ryosuke-a08a82255/",
+      icon: Linkedin,
+      description: "プロフェッショナルネットワーク"
     }
   ],
   skills: [
@@ -41,19 +52,19 @@ const profile = {
   ],
   experiences: [
     {
-      title: "Senior Associate (DevSecOps Engineer)",
+      title: "Shift->eft (Security Engineer)",
       company: "NRI SecureTechnologies (出向: 野村総合研究所)",
       period: "2025年4月 - 現在",
-      description: "セキュリティ診断業務、認証基盤のSI開発・保守、生成AI活用推進を担当。Webアプリケーション・ネットワーク脆弱性診断を実施し、セキュリティ技術研修講師も務める。"
+      description: "各種セキュリティ診断、生成AI活用"
     },
     {
-      title: "Associate (Cyber Security Engineer)", 
+      title: "DevSecOps (Security Engineer)", 
       company: "NRI SecureTechnologies (出向: 野村総合研究所)",
       period: "2023年4月 - 2025年3月",
-      description: "認証基盤のSI開発でPM兼開発者として1000万円規模プロジェクトを推進。各種セキュリティ診断、社内基盤の AWS 移行、シフトレフト活動によるセキュリティレビューを実施。"
+      description: "認証基盤のSI開発でPM兼開発者としてプロジェクトを推進。各種セキュリティ診断、セキュリティレビュー，セキュリティ技術研修講師を実施。"
     },
     {
-      title: "Network Operations Engineer",
+      title: "Network Operations(Security Engineer)",
       company: "NRI SecureTechnologies (出向: 野村総合研究所)",
       period: "2022年4月 - 2023年3月",
       description: "顧客ネットワーク機器の運用保守業務を担当。Crowd Strike導入支援、SRX・BIG-IPのバージョンアップ対応、Shell Scriptを用いたログ調査・分析を実施。"
