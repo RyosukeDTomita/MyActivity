@@ -42,6 +42,12 @@ const profile = {
       url: "https://www.linkedin.com/in/tomita-ryosuke-a08a82255/",
       icon: Linkedin,
       description: "プロフェッショナルネットワーク"
+    },
+    {
+      name: "Resume",
+      url: "https://gist.github.com/RyosukeDTomita/c81a075afb87453885b0910272448ab9",
+      icon: ExternalLink,
+      description: "職務経歴書"
     }
   ],
   skills: [
@@ -222,15 +228,6 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center pt-8 border-t border-gray-200 dark:border-slate-700"
         >
-          <div className="flex justify-center items-center space-x-2 text-gray-600 dark:text-gray-400 mb-4">
-            <Mail className="w-4 h-4" />
-            <a 
-              href={`mailto:${profile.email}`}
-              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              {profile.email}
-            </a>
-          </div>
           <p className="text-gray-500 dark:text-gray-500 text-sm">
             © 2025 {profile.name}. Built with Next.js & Tailwind CSS.
           </p>
