@@ -10,7 +10,7 @@ const profile = {
   title: "Security Engineer",
   description: "NRI SecureTechnologies でセキュリティエンジニアとして活動。DevSecOps、セキュリティ診断、生成AI活用推進に従事。Qiitaに100件以上の技術記事を投稿し、勉強会でのLTも実施。",
   location: "Tokyo, Japan",
-  avatar: "/images/profile.jpg", // ここを実際の画像パスに変更してください
+  avatar: "./images/profile.jpg", // ここを実際の画像パスに変更してください
   joinDate: "2022年",
   links: [
     {
