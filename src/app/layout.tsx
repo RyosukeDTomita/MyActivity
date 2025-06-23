@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "あなたの名前 - Portfolio",
+  title: "sigma profile - Portfolio",
   description: "フルスタック開発者として、React、Next.js、TypeScriptを使用してWebアプリケーションを開発しています。",
   keywords: "フロントエンド, バックエンド, React, Next.js, TypeScript, ソフトウェアエンジニア",
-  authors: [{ name: "あなたの名前" }],
-  creator: "あなたの名前",
+  authors: [{ name: "sigma profile" }],
+  creator: "sigma profile",
   openGraph: {
-    title: "あなたの名前 - Portfolio",
+    title: "sigma profile - Portfolio",
     description: "フルスタック開発者として、React、Next.js、TypeScriptを使用してWebアプリケーションを開発しています。",
     type: "website",
   },
