@@ -9,7 +9,7 @@ if not api_key:
 genai.configure(api_key=api_key)
 
 # モデルの初期化
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-2.5-pro-latest')
 
 # ここでGitHubから受け取ったコンテキストを処理し、
 # モデルにプロンプトを送信するロジックを実装します。
