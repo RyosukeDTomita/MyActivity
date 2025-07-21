@@ -61,7 +61,15 @@ export const translations = {
           }
         ]
       },
-      footer: "Built with Next.js & Tailwind CSS."
+      footer: "Built with Next.js & Tailwind CSS.",
+      activities: {
+        title: "Activities",
+        ltPresentations: "Lightning Talks",
+        date: "Date",
+        eventPage: "Event Page",
+        slides: "Speaker Deck",
+        recording: "Recording"
+      }
     }
   },
   ja: {
@@ -126,7 +134,15 @@ export const translations = {
           }
         ]
       },
-      footer: "Built with Next.js & Tailwind CSS."
+      footer: "Built with Next.js & Tailwind CSS.",
+      activities: {
+        title: "Activities",
+        ltPresentations: "Lightning Talks",
+        date: "実施日",
+        eventPage: "Event Page",
+        slides: "Speaker Deck",
+        recording: "録画"
+      }
     }
   }
 };
