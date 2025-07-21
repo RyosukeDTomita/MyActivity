@@ -50,7 +50,7 @@ go to http://localhost:3000/MyActivity/
 1. GitHub Pages --> Build and deployment --> SourceをGitHub Actionsに
     ![github-pages](./assets/github-pages.png)
 2. Actions --> Workflow permissions --> Read and write permissions
-    [!github-actions](./assets/github-actions.png)
+    ![github-actions](./assets/github-actions.png)
 
 ### Deploy to GitHub Pages via GitHub Actions
 
