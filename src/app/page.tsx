@@ -3,6 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Github, ExternalLink, MapPin, Calendar, Book, Presentation, Linkedin } from "lucide-react";
+import { useLanguage } from '@/contexts/LanguageContext';
+import { translations } from '@/translations/translations';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 // プロフィール情報をここで編集してください
 const profile = {
@@ -79,8 +82,12 @@ const profile = {
 };
 
 export default function Home() {
+  const { language } = useLanguage();
+  const t = translations[language].profile;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+      <LanguageSwitcher />
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* ヘッダーセクション */}
         <motion.div 
@@ -99,23 +106,23 @@ export default function Home() {
             />
           </div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-            {profile.name}
+            {t.name}
           </h1>
           <p className="text-xl text-blue-600 dark:text-blue-400 mb-4">
-            {profile.title}
+            {t.title}
           </p>
           <div className="flex items-center justify-center space-x-4 text-gray-600 dark:text-gray-300 mb-6">
             <div className="flex items-center">
               <MapPin className="w-4 h-4 mr-1" />
-              {profile.location}
+              {t.location}
             </div>
             <div className="flex items-center">
               <Calendar className="w-4 h-4 mr-1" />
-              {profile.joinDate}から活動
+              {t.joinDate}
             </div>
           </div>
           <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            {profile.description}
+            {t.description}
           </p>
         </motion.div>
 
@@ -127,7 +134,7 @@ export default function Home() {
           className="mb-12"
         >
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-            Links
+            {t.links.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {profile.links.map((link, index) => (
@@ -151,7 +158,7 @@ export default function Home() {
                       {link.name}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      {link.description}
+                      {t.links.items.find(item => item.name === link.name)?.description || link.description}
                     </p>
                   </div>
                 </div>
@@ -168,7 +175,7 @@ export default function Home() {
           className="mb-12"
         >
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-            Skills
+            {t.skills.title}
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {profile.skills.map((skill, index) => (
@@ -193,7 +200,7 @@ export default function Home() {
           className="mb-12"
         >
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-            Experience
+            {t.experience.title}
           </h2>
           <div className="space-y-6">
             {profile.experiences.map((exp, index) => (
@@ -205,16 +212,16 @@ export default function Home() {
                 className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
               >
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  {exp.title}
+                  {t.experience.items[index].title}
                 </h3>
                 <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">
-                  {exp.company}
+                  {t.experience.items[index].company}
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                  {exp.period}
+                  {t.experience.items[index].period}
                 </p>
                 <p className="text-gray-700 dark:text-gray-300">
-                  {exp.description}
+                  {t.experience.items[index].description}
                 </p>
               </motion.div>
             ))}
@@ -229,7 +236,7 @@ export default function Home() {
           className="text-center pt-8 border-t border-gray-200 dark:border-slate-700"
         >
           <p className="text-gray-500 dark:text-gray-500 text-sm">
-            © 2025 {profile.name}. Built with Next.js & Tailwind CSS.
+            © 2025 {t.name}. {t.footer}
           </p>
         </motion.footer>
       </div>
