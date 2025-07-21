@@ -104,7 +104,7 @@ export default function Home() {
                       {link.name}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      {t.links.items.find(item => item.name === link.name)?.description || link.description}
+                      {t.links.items.find(item => item.name === link.name)?.description || ''}
                     </p>
                   </div>
                 </div>

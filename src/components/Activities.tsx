@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, ExternalLink, Presentation, Video } from 'lucide-react';
+import { Calendar, ExternalLink, Presentation } from 'lucide-react';
 import { ltPresentations, getYouTubeEmbedUrl } from '@/data/activitiesData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/translations/translations';
@@ -67,7 +67,7 @@ export default function Activities() {
               {embedUrl && (
                 <div className="mt-4">
                   <div className="w-full md:w-1/2">
-                    <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden bg-gray-100 dark:bg-slate-900">
+                    <div className="rounded-lg overflow-hidden bg-gray-100 dark:bg-slate-900">
                       <iframe
                         src={embedUrl}
                         title={lt.title}
