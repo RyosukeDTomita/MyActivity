@@ -11,7 +11,8 @@ export const ltPresentations: LTPresentation[] = [
     date: "2025/07/02",
     title: "MCPのセキュリティ",
     eventUrl: "https://increments.connpass.com/event/356654/",
-    slideUrl: "https://speakerdeck.com/ryosukedtomita/number-qiitabash-mcpnosekiyuritei"
+    slideUrl: "https://speakerdeck.com/ryosukedtomita/number-qiitabash-mcpnosekiyuritei",
+    youtubeUrl: "https://www.youtube.com/watch?v=ahgWRiOqOrU"
   },
   {
     date: "2025/05/28",
