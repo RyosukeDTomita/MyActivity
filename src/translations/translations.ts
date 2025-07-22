@@ -5,7 +5,7 @@ export const translations = {
       title: "Security Engineer",
       description: "Working as a Security Engineer at NRI SecureTechnologies. Involved in SI development/maintenance of authentication infrastructure, security assessments, shift-left security, and promoting generative AI utilization. Privately contributed over 100 technical articles to Qiita and conducted lightning talks at study groups.",
       location: "Tokyo, Japan",
-      joinDate: "Active at 2022",
+      joinDate: "Active since 2022",
       links: {
         title: "Links",
         items: [
@@ -78,7 +78,7 @@ export const translations = {
       title: "Security Engineer",
       description: "NRI SecureTechnologies でセキュリティエンジニアとして活動。認証基盤のSI開発/保守、セキュリティ診断、シフトレフトセキュリティ，生成AI活用推進に従事。プライベートではQiitaに100件以上の技術記事を投稿し、勉強会でのLTも実施。",
       location: "Tokyo, Japan",
-      joinDate: "Active at 2022",
+      joinDate: "Active since 2022",
       links: {
         title: "Links",
         items: [
