@@ -7,6 +7,7 @@ export interface LTPresentation {
 }
 
 export interface PodcastAppearance {
+  date?: string;
   title: string;
   links: {
     podcast?: string;
@@ -18,13 +19,29 @@ export interface PodcastAppearance {
 
 export const podcastAppearances: PodcastAppearance[] = [
   {
-    title: "成長のきっかけは、アウトプットに強制感をもたせたこと/NRIセキュアテクノロジーズ 富田涼介①",
+    date: "2025/07/24",
+    title: "#123 成長のきっかけは、アウトプットに強制感をもたせたこと/NRIセキュアテクノロジーズ 富田涼介①",
     links: {
       podcast: "https://podcasts.apple.com/jp/podcast/123-%E6%88%90%E9%95%B7%E3%81%AE%E3%81%8D%E3%81%A3%E3%81%8B%E3%81%91%E3%81%AF-%E3%82%A2%E3%82%A6%E3%83%88%E3%83%97%E3%83%83%E3%83%88%E3%81%AB%E5%BC%B7%E5%88%B6%E6%84%9F%E3%82%92%E6%8C%81%E3%81%9F%E3%81%9B%E3%81%9F%E3%81%93%E3%81%A8-nri%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA-%E5%AF%8C%E7%94%B0%E6%B6%BC%E4%BB%8B/id1653563200?i=1000718692119",
       amazonMusic: "https://music.amazon.co.jp/podcasts/3e2c415b-5a48-4a1b-8810-5c0be5488e9a/episodes/616ce0ab-a966-4580-8e98-1dcbf024372d/%E8%81%B4%E3%81%8F%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2type-123-%E6%88%90%E9%95%B7%E3%81%AE%E3%81%8D%E3%81%A3%E3%81%8B%E3%81%91%E3%81%AF%E3%80%81%E3%82%A2%E3%82%A6%E3%83%88%E3%83%97%E3%83%83%E3%83%88%E3%81%AB%E5%BC%B7%E5%88%B6%E6%84%9F%E3%82%92%E6%8C%81%E3%81%9F%E3%81%9B%E3%81%9F%E3%81%93%E3%81%A8%EF%BC%8Fnri%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA-%E5%AF%8C%E7%94%B0%E6%B6%BC%E4%BB%8B%E2%91%A0",
       spotify: "https://open.spotify.com/episode/1bEnIamRjXVpCFMOebS0CK",
       youtube: "https://www.youtube.com/@type-rp4hs/videos"
     }
+  },
+  {
+    date: "2025/07/31",
+    title: "#124 考えうる最悪な想定を超えなければ、前向きになれる/NRIセキュアテクノロジーズ 富田涼介②",
+    links: {}
+  },
+  {
+    date: "2025/08/07",
+    title: "#125 会社名を背負って記事を書く、責任の大きさが成長を後押ししてくれた/NRIセキュアテクノロジーズ 富田涼介③",
+    links: {}
+  },
+  {
+    date: "2025/08/21",
+    title: "#126 成長を加速させるのは\"傲慢さ\"かもしれない/NRIセキュアテクノロジーズ 富田涼介④",
+    links: {}
   }
 ];
 
