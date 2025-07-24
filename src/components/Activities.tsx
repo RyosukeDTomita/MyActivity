@@ -36,6 +36,13 @@ export default function Activities() {
                 {podcast.title}
               </h3>
               
+              {podcast.date && (
+                <div className="flex items-center text-gray-600 dark:text-gray-400 mb-4">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span className="text-sm">{podcast.date}</span>
+                </div>
+              )}
+              
               <div className="flex flex-wrap gap-4">
                 {podcast.links.podcast && (
                   <a
