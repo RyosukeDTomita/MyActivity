@@ -178,7 +178,7 @@ export default function Activities() {
             Qiita Tech Festa 2025
           </h3>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-            2025年6月17日〜2025年7月15日
+            2025/06/17〜2025/07/15
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -187,7 +187,7 @@ export default function Activities() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-4 py-2 rounded-full hover:bg-green-200 dark:hover:bg-green-800 transition-colors"
             >
-              <span className="font-medium">{t.userLikeRanking}</span>
+              <span className="font-medium">ユーザいいねランキング 30位 132いいね</span>
               <ExternalLink className="w-4 h-4" />
             </a>
             <a
@@ -196,7 +196,7 @@ export default function Activities() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
             >
-              <span className="font-medium">ユーザ投稿数ランキング 10位</span>
+              <span className="font-medium">ユーザ投稿数ランキング 10位 20記事</span>
               <ExternalLink className="w-4 h-4" />
             </a>
             <a
@@ -206,7 +206,7 @@ export default function Activities() {
               className="inline-flex items-center gap-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-4 py-2 rounded-full hover:bg-purple-200 dark:hover:bg-purple-800 transition-colors"
             >
               <span className="font-medium">Advanced Organizations 達成</span>
-              <span className="text-sm">(20記事以上・100いいね以上)</span>
+              <span className="text-sm">(合計100いいねかつ合計20記事投稿)</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
@@ -218,7 +218,7 @@ export default function Activities() {
             Qiita Advent Calendar 2024
           </h3>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-            2024年12月1日〜2024年12月25日
+            2024/12/01〜2024/12/25
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
