@@ -68,7 +68,10 @@ export const translations = {
         date: "Date",
         eventPage: "Event Page",
         slides: "Speaker Deck",
-        recording: "Recording"
+        recording: "Recording",
+        techBlog: "Tech Blog",
+        viewArticle: "View Article",
+        tags: "Tags"
       }
     }
   },
@@ -141,7 +144,10 @@ export const translations = {
         date: "実施日",
         eventPage: "Event Page",
         slides: "Speaker Deck",
-        recording: "録画"
+        recording: "録画",
+        techBlog: "Tech Blog",
+        viewArticle: "記事を見る",
+        tags: "タグ"
       }
     }
   }

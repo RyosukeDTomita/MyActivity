@@ -17,6 +17,15 @@ export interface PodcastAppearance {
   };
 }
 
+export interface TechBlogPost {
+  date: string;
+  title: string;
+  platform: 'Qiita' | 'Zenn' | 'Other';
+  url: string;
+  tags?: string[];
+  description?: string;
+}
+
 export const podcastAppearances: PodcastAppearance[] = [
   {
     date: "2025/07/24",
@@ -68,6 +77,8 @@ export const ltPresentations: LTPresentation[] = [
     youtubeUrl: "https://www.youtube.com/watch?v=lNkD_DECvtQ"
   }
 ];
+
+export const techBlogPosts: TechBlogPost[] = [];
 
 // Helper function to convert YouTube URL to embed URL
 export function getYouTubeEmbedUrl(url: string): string | null {
