@@ -187,7 +187,7 @@ export default function Activities() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-4 py-2 rounded-full hover:bg-green-200 dark:hover:bg-green-800 transition-colors"
             >
-              <span className="font-medium">ユーザいいねランキング 30位</span>
+              <span className="font-medium">{t.userLikeRanking}</span>
               <ExternalLink className="w-4 h-4" />
             </a>
             <a
