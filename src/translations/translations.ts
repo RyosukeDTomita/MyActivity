@@ -61,7 +61,7 @@ export const translations = {
           }
         ]
       },
-      footer: "Built with Next.js & Tailwind CSS.",
+      footer: "Built with Next.js & Tailwind CSS(Vibe Coding).",
       activities: {
         title: "Activities",
         ltPresentations: "Lightning Talks",
@@ -137,7 +137,7 @@ export const translations = {
           }
         ]
       },
-      footer: "Built with Next.js & Tailwind CSS.",
+      footer: "Built with Next.js & Tailwind CSS(Vibe Coding).",
       activities: {
         title: "Activities",
         ltPresentations: "Lightning Talks",
