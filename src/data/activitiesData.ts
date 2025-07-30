@@ -40,7 +40,12 @@ export const podcastAppearances: PodcastAppearance[] = [
   {
     date: "2025/07/31",
     title: "#124 考えうる最悪な想定を超えなければ、前向きになれる/富田涼介②",
-    links: {}
+    links: {
+      podcast: "https://podcasts.apple.com/jp/podcast/124-%E8%80%83%E3%81%88%E3%81%86%E3%82%8B%E6%9C%80%E6%82%AA%E3%81%AA%E6%83%B3%E5%AE%9A%E3%82%92%E8%B6%8A%E3%81%88%E3%81%AA%E3%81%91%E3%82%8C%E3%81%B0-%E5%89%8D%E5%90%91%E3%81%8D%E3%81%AB%E3%81%AA%E3%82%8C%E3%82%8B-nri%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA-%E5%AF%8C%E7%94%B0%E6%B6%BC%E4%BB%8B/id1653563200?i=1000719803026",
+      amazonMusic: "https://music.amazon.co.jp/podcasts/3e2c415b-5a48-4a1b-8810-5c0be5488e9a/episodes/2e749c6f-56bb-4342-b0e9-c3f8acdf223a/%E8%81%B4%E3%81%8F%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2type-124-%E8%80%83%E3%81%88%E3%81%86%E3%82%8B%E6%9C%80%E6%82%AA%E3%81%AA%E6%83%B3%E5%AE%9A%E3%82%92%E8%B6%8A%E3%81%88%E3%81%AA%E3%81%91%E3%82%8C%E3%81%B0%E3%80%81%E5%89%8D%E5%90%91%E3%81%8D%E3%81%AB%E3%81%AA%E3%82%8C%E3%82%8B%EF%BC%8Fnri%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA-%E5%AF%8C%E7%94%B0%E6%B6%BC%E4%BB%8B%E2%91%A1",
+      spotify: "https://open.spotify.com/episode/4nV7TgdJdsXrL78JH1WSxu",
+      youtube: "https://www.youtube.com/watch?v=kffGRaxi-A8"
+    }
   },
   {
     date: "2025/08/07",
