@@ -175,7 +175,7 @@ export default function Activities() {
         {/* Rankings and Achievements */}
         <div className="mb-8 text-center">
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-            Qiita Tech Festa 2025
+            Qiita Tech Spring 2025
           </h3>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
             2025/06/17〜2025/07/15
