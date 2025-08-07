@@ -50,7 +50,11 @@ export const podcastAppearances: PodcastAppearance[] = [
   {
     date: "2025/08/07",
     title: "#125 会社名を背負って記事を書く、責任の大きさが成長を後押ししてくれた/富田涼介③",
-    links: {}
+    links: {
+      spotify: "https://open.spotify.com/episode/6Z9yXsDiqrtiktIYioFq9m",
+      podcast: "https://podcasts.apple.com/us/podcast/125-%E4%BC%9A%E7%A4%BE%E5%90%8D%E3%82%92%E8%83%8C%E8%B2%A0%E3%81%A3%E3%81%A6%E8%A8%98%E4%BA%8B%E3%82%92%E6%9B%B8%E3%81%8F-%E8%B2%AC%E4%BB%BB%E3%81%AE%E5%A4%A7%E3%81%8D%E3%81%95%E3%81%8C%E6%88%90%E9%95%B7%E3%82%92%E5%BE%8C%E6%8A%BC%E3%81%97%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%81%9F-nri%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA/id1653563200?i=1000720912856",
+      amazonMusic: "https://music.amazon.co.jp/podcasts/3e2c415b-5a48-4a1b-8810-5c0be5488e9a/episodes/d02103f7-04e3-4307-9c1a-e5ea27070370/%E8%81%B4%E3%81%8F%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2type-125-%E4%BC%9A%E7%A4%BE%E5%90%8D%E3%82%92%E8%83%8C%E8%B2%A0%E3%81%A3%E3%81%A6%E8%A8%98%E4%BA%8B%E3%82%92%E6%9B%B8%E3%81%8F%E3%80%81%E8%B2%AC%E4%BB%BB%E3%81%AE%E5%A4%A7%E3%81%8D%E3%81%95%E3%81%8C%E6%88%90%E9%95%B7%E3%82%92%E5%BE%8C%E6%8A%BC%E3%81%97%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%81%9F%EF%BC%8Fnri%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA-%E5%AF%8C%E7%94%B0%E6%B6%BC%E4%BB%8B%E2%91%A2"
+    }
   },
   {
     date: "2025/08/21",
