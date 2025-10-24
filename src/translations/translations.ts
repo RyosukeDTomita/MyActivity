@@ -32,6 +32,10 @@ export const translations = {
           {
             name: "Resume",
             description: "Career history(職務経歴書)"
+          },
+          {
+            name: "Reading History",
+            description: "List of books I have read"
           }
         ]
       },
@@ -107,7 +111,11 @@ export const translations = {
           },
           {
             name: "Resume",
-            description: "Career history(職務経歴書)"
+            description: "職務経歴書"
+          },
+          {
+            name: "Reading History",
+            description: "読んだ本リスト"
           }
         ]
       },
