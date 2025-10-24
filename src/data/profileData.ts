@@ -32,6 +32,11 @@ export const profileData = {
       name: "Resume",
       url: "https://gist.github.com/RyosukeDTomita/c81a075afb87453885b0910272448ab9",
       icon: ExternalLink
+    },
+    {
+      name: "Reading History",
+      url: "https://gist.github.com/RyosukeDTomita/63e4dab0b6dcec4b3ba13db9ea435551",
+      icon: Book
     }
   ],
   skills: [
