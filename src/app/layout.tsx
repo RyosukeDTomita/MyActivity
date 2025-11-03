@@ -14,14 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "sigma profile - Portfolio",
-  description: "フルスタック開発者として、React、Next.js、TypeScriptを使用してWebアプリケーションを開発しています。",
+  description: "セキュリティエンジニアとして活動。Qiitaを中心に技術記事の投稿やLT等の発信にも力を入れている。最近は育児の傍らでHaskellでの競技プログラミングに力を入れている。",
   keywords: "フロントエンド, バックエンド, React, Next.js, TypeScript, ソフトウェアエンジニア",
   authors: [{ name: "sigma profile" }],
   creator: "sigma profile",
   openGraph: {
     title: "sigma profile - Portfolio",
-    description: "フルスタック開発者として、React、Next.js、TypeScriptを使用してWebアプリケーションを開発しています。",
+    description: "セキュリティエンジニアとして活動。Qiitaを中心に技術記事の投稿やLT等の発信にも力を入れている。最近は育児の傍らでHaskellでの競技プログラミングに力を入れている。",
     type: "website",
   },
 };
