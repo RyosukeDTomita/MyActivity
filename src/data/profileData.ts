@@ -14,6 +14,11 @@ export const profileData = {
       icon: Book
     },
     {
+      name: "Note",
+      url: "https://note.com/sigma5736394841",
+      icon: ExternalLink
+    },
+    {
       name: "Zenn",
       url: "https://zenn.dev/sigma_tom",
       icon: ExternalLink
