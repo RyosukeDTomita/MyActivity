@@ -172,6 +172,27 @@ export default function Activities() {
           {t.techBlog}
         </h2>
 
+        {/* Advent Calendar 2025 */}
+        <div className="mb-8 text-center">
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+            Qiita Advent Calendar 2025
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            2025/12/01〜2025/12/11
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="https://qiita.com/advent-calendar/2023/haskell-atcoder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 px-4 py-2 rounded-full hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors"
+            >
+              <span className="font-medium">HaskellでAtCoderに参加してみた(11記事)</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+
         {/* Rankings and Achievements */}
         <div className="mb-8 text-center">
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
@@ -232,6 +253,7 @@ export default function Activities() {
             </a>
           </div>
         </div>
+
         
         <div className="space-y-6">
           {techBlogPosts.map((post, index) => (
