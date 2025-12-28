@@ -182,7 +182,7 @@ export default function Activities() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://qiita.com/advent-calendar/2023/haskell-atcoder"
+              href="https://qiita.com/advent-calendar/2025/haskell-atcoder"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 px-4 py-2 rounded-full hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors"
