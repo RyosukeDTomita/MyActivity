@@ -87,7 +87,6 @@ export default function Home() {
               className="mx-auto max-w-full"
               width="721"
               height="112"
-              loading="lazy"
               decoding="async"
             />
           </div>
