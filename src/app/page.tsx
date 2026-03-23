@@ -84,6 +84,10 @@ export default function Home() {
               src="https://ghchart.rshah.org/ryosukedtomita"
               alt="GitHub contributions chart"
               className="mx-auto max-w-full"
+              width="721"
+              height="112"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </motion.div>

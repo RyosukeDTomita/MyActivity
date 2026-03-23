@@ -33,6 +33,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        <link rel="preconnect" href="https://ghchart.rshah.org" />
+        <link rel="dns-prefetch" href="https://ghchart.rshah.org" />
+        <link rel="preload" href="/MyActivity/images/profile.webp" as="image" type="image/webp" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
