@@ -56,6 +56,7 @@ export default function Home() {
               src={profileData.avatar}
               alt={`${t.name}のプロフィール画像`}
               fill
+              sizes="128px"
               className="rounded-full border-4 border-white shadow-lg object-cover"
               priority
             />
@@ -84,6 +85,9 @@ export default function Home() {
               src="https://ghchart.rshah.org/ryosukedtomita"
               alt="GitHub contributions chart"
               className="mx-auto max-w-full"
+              width="721"
+              height="112"
+              decoding="async"
             />
           </div>
         </motion.div>
