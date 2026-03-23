@@ -14,16 +14,25 @@ import Activities from '@/components/Activities';
 export default function Home() {
   const { language } = useLanguage();
   const t = translations[language].profile;
-  const [activeTab, setActiveTab] = useState('profile');
+  const validTabs = ['profile', 'activities'];
+  const getTabFromHash = () => {
+    if (typeof window === 'undefined') return 'profile';
+    const hash = window.location.hash.replace('#', '');
+    return validTabs.includes(hash) ? hash : 'profile';
+  };
+  const [activeTab, setActiveTab] = useState(getTabFromHash);
 
   useEffect(() => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash === 'activities') setActiveTab('activities');
+    const onHashChange = () => {
+      setActiveTab(getTabFromHash());
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    window.history.replaceState(null, '', tab === 'profile' ? '#profile' : `#${tab}`);
+    window.history.replaceState(null, '', `#${tab}`);
   };
 
   const tabs = [
