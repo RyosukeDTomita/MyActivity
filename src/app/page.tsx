@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin, Calendar } from "lucide-react";
@@ -15,6 +15,16 @@ export default function Home() {
   const { language } = useLanguage();
   const t = translations[language].profile;
   const [activeTab, setActiveTab] = useState('profile');
+
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash === 'activities') setActiveTab('activities');
+  }, []);
+
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    window.history.replaceState(null, '', tab === 'profile' ? '#profile' : `#${tab}`);
+  };
 
   const tabs = [
     { id: 'profile', label: 'Profile' },
@@ -73,7 +83,7 @@ export default function Home() {
         <TabNavigation 
           tabs={tabs}
           activeTab={activeTab}
-          onTabChange={setActiveTab}
+          onTabChange={handleTabChange}
         />
 
         {/* Tab Content */}
