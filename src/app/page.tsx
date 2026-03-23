@@ -60,6 +60,13 @@ export default function Home() {
           <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
             {t.description}
           </p>
+          <div className="mt-6">
+            <img
+              src="https://ghchart.rshah.org/ryosukedtomita"
+              alt="GitHub contributions chart"
+              className="mx-auto max-w-full"
+            />
+          </div>
         </motion.div>
 
         {/* Tab Navigation */}
