@@ -1,7 +1,7 @@
 import { Github, Book, ExternalLink, Presentation, Linkedin } from "lucide-react";
 
 export const profileData = {
-  avatar: "./images/profile.jpg",
+  avatar: "./images/profile.webp",
   links: [
     {
       name: "GitHub",
