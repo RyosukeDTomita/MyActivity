@@ -56,6 +56,7 @@ export default function Home() {
               src={profileData.avatar}
               alt={`${t.name}のプロフィール画像`}
               fill
+              sizes="128px"
               className="rounded-full border-4 border-white shadow-lg object-cover"
               priority
             />
