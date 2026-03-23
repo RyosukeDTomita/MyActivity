@@ -15,11 +15,11 @@ export const translations = {
           },
           {
             name: "Qiita",
-            description: "Technical articles and knowledge"
+            description: "Tech Blog (All)"
           },
           {
             name: "Zenn",
-            description: "Technical articles and Zenn books"
+            description: "Tech Blog (Selected)"
           },
           {
             name: "Speaker Deck",
@@ -46,22 +46,34 @@ export const translations = {
         title: "Experience",
         items: [
           {
-            title: "ShiftLeft (Security Engineer)",
-            company: "NRI SecureTechnologies Cyber Engineering Division (Division name changed) (Seconded from: Nomura Research Institute)",
-            period: "April 2025 - Present",
-            description: "Responsible for various security assessments, generative AI utilization, and shift-left security consulting services."
+            title: "Software Engineer",
+            company: "Nomura Research Institute, Ltd. / AX Innovation Center",
+            period: "April 2026 - Present",
+            description: ""
           },
           {
-            title: "DevSecOps (Security Engineer)",
-            company: "NRI SecureTechnologies DX Security Consulting Division (Seconded from: Nomura Research Institute)",
-            period: "April 2023 - July 2025",
-            description: "Led projects as PM and developer in SI development/maintenance of authentication infrastructure. Conducted various security assessments, security reviews, and managed internal infrastructure. Also served as a security technology training instructor for new graduates."
+            title: "Security Architect",
+            company: "NRI SecureTechnologies (Seconded from: Nomura Research Institute)",
+            period: "April 2023 - March 2026",
+            description: "",
+            subRoles: [
+              {
+                department: "Cyber Engineering Division / DevSecOps Dept. (Security Advanced Technology Development Dept.)",
+                period: "April 2023 - March 2025",
+                description: "Engaged in SI development/maintenance of authentication infrastructure for financial SaaS, security assessments, and security consulting. Led projects as playing manager."
+              },
+              {
+                department: "Cyber Engineering Division / ShiftLeft Security Division",
+                period: "April 2025 - March 2026",
+                description: "Continued SI development/maintenance of authentication infrastructure (carrying over previous division's project), security assessments, security technology consulting, and promoting generative AI utilization. (Parental leave: October 2025 - mid-March 2026)"
+              }
+            ]
           },
           {
-            title: "Network Operations (Security Engineer)",
+            title: "Security Consultant",
             company: "NRI SecureTechnologies MSS Division (Seconded from: Nomura Research Institute)",
             period: "April 2022 - March 2023",
-            description: "Responsible for operation and maintenance of customer network equipment. Supported CrowdStrike implementation, handled SRX/BIG-IP version upgrades, and conducted log investigation and analysis using Shell Scripts."
+            description: "Responsible for operation and maintenance of customer network equipment, and log analysis using Shell Scripts."
           }
         ]
       },
@@ -95,11 +107,11 @@ export const translations = {
           },
           {
             name: "Qiita",
-            description: "Technical articles and knowledge"
+            description: "Tech Blog (All)"
           },
           {
             name: "Zenn",
-            description: "Technical articles and Zenn books"
+            description: "Tech Blog (Selected)"
           },
           {
             name: "Speaker Deck",
@@ -126,22 +138,34 @@ export const translations = {
         title: "Experience",
         items: [
           {
-            title: "ShiftLeft (Security Engineer)",
-            company: "NRI SecureTechnologies サイバーエンジニアリング事業本部(本部名変更) (出向: 野村総合研究所)",
-            period: "2025年4月 - 現在",
-            description: "各種セキュリティ診断、生成AI活用，シフトレフトセキュリティのコンサルティング業務を担当。"
+            title: "Software Engineer",
+            company: "株式会社野村総合研究所 AXイノベーションセンター",
+            period: "2026年4月 - 現在",
+            description: ""
           },
           {
-            title: "DevSecOps (Security Engineer)",
-            company: "NRI SecureTechnologies DXセキュリティコンサルティング事業本部 (出向: 野村総合研究所)",
-            period: "2023年4月 - 2025年7月",
-            description: "認証基盤のSI開発/保守でPM兼開発者としてプロジェクトを推進。各種セキュリティ診断、セキュリティレビュー，社内基盤の管理を実施。また，セキュリティ技術研修講師として新卒向けに教育活動を行った。"
+            title: "セキュリティアーキテクト",
+            company: "NRIセキュアテクノロジーズ株式会社 (出向: 野村総合研究所)",
+            period: "2023年4月 - 2026年3月",
+            description: "",
+            subRoles: [
+              {
+                department: "サイバーエンジニアリング事業本部 DevSecOps部(セキュリティ先進技術開発部)",
+                period: "2023年4月〜2025年3月",
+                description: "認証基盤を中心としたSI開発・保守、セキュリティ診断、およびセキュリティコンサルティング業務に従事。金融系SaaSで使用する認証基盤のSI開発においてプレイングマネージャとして案件を推進。"
+              },
+              {
+                department: "サイバーエンジニアリング事業本部 シフトレフトセキュリティ事業部",
+                period: "2025年4月〜2026年3月",
+                description: "金融系SaaSで使用する認証基盤のSI開発保守(前部署での案件を継続)、セキュリティ診断、セキュリティ観点での技術相談対応、生成AI活用推進に従事。(2025年10月〜2026年3月中旬まで育児休暇取得)"
+              }
+            ]
           },
           {
-            title: "Network Operations(Security Engineer)",
-            company: "NRI SecureTechnologies MSS事業本部 (出向: 野村総合研究所)",
+            title: "セキュリティコンサルタント",
+            company: "NRIセキュアテクノロジーズ株式会社 MSS事業本部 MSS二部 (出向: 野村総合研究所)",
             period: "2022年4月 - 2023年3月",
-            description: "顧客ネットワーク機器の運用保守業務を担当。Crowd Strike導入支援、SRX・BIG-IPのバージョンアップ対応、Shell Scriptを用いたログ調査・分析を実施。"
+            description: "顧客ネットワーク機器の運用保守及び、ShellScriptによるログ解析に従事。"
           }
         ]
       },

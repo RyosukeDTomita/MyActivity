@@ -173,9 +173,22 @@ export default function Home() {
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
                   {exp.period}
                 </p>
-                <p className="text-gray-700 dark:text-gray-300">
-                  {exp.description}
-                </p>
+                {exp.description && (
+                  <p className="text-gray-700 dark:text-gray-300">
+                    {exp.description}
+                  </p>
+                )}
+                {exp.subRoles && (
+                  <div className="space-y-4 mt-2">
+                    {exp.subRoles.map((role, roleIndex) => (
+                      <div key={roleIndex} className="border-l-2 border-blue-300 dark:border-blue-600 pl-4">
+                        <p className="text-gray-800 dark:text-gray-200 font-medium text-sm">{role.department}</p>
+                        <p className="text-gray-500 dark:text-gray-400 text-xs mb-1">{role.period}</p>
+                        <p className="text-gray-700 dark:text-gray-300 text-sm">{role.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>

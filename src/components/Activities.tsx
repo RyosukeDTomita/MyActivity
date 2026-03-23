@@ -248,7 +248,7 @@ export default function Activities() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-4 py-2 rounded-full hover:bg-orange-200 dark:hover:bg-orange-800 transition-colors"
             >
-              <span className="font-medium">セキュリティごった煮一人完走チャレンジ</span>
+              <span className="font-medium">セキュリティごった煮一人完走チャレンジ(25記事)</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>

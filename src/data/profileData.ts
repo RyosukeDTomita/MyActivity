@@ -40,14 +40,14 @@ export const profileData = {
     },
     {
       name: "Reading History",
-      url: "https://gist.github.com/RyosukeDTomita/63e4dab0b6dcec4b3ba13db9ea435551",
+      url: "https://ryosukedtomita.github.io/myblog/posts/book/index.html",
       icon: Book
     }
   ],
   skills: [
-    "AI Agents", "Test-Driven Development", "DevSecOps", "Vulnerability Scanning",
-    "Agile Application Development", "Amazon Web Services (AWS)", "Shell Scripting",
-    "Python (Programming Language)", "TypeScript", "Java",
-    "Continuous Integration and Continuous Delivery (CI/CD)", "Docker Products"
+    "Test-Driven Development", "DevSecOps", "Vulnerability Scanning",
+    "Agile Application Development", "AWS", "Shell Scripting",
+    "Python3", "TypeScript", "Java", "Haskell", "Security",
+    "CI/CD", "Docker/Podman"
   ]
 };
