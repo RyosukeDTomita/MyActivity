@@ -30,12 +30,12 @@ export const translations = {
             description: ""
           },
           {
-            name: "Resume",
-            description: "Career history(職務経歴書)"
-          },
-          {
             name: "Reading History",
             description: "List of books I have read"
+          },
+          {
+            name: "AtCoder",
+            description: "Competitive programming"
           }
         ]
       },
@@ -122,12 +122,12 @@ export const translations = {
             description: ""
           },
           {
-            name: "Resume",
-            description: "職務経歴書"
-          },
-          {
             name: "Reading History",
             description: "読んだ本リスト"
+          },
+          {
+            name: "AtCoder",
+            description: "競技プログラミング"
           }
         ]
       },

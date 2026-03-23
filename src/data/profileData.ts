@@ -34,14 +34,14 @@ export const profileData = {
       icon: Linkedin
     },
     {
-      name: "Resume",
-      url: "https://gist.github.com/RyosukeDTomita/c81a075afb87453885b0910272448ab9",
-      icon: ExternalLink
-    },
-    {
       name: "Reading History",
       url: "https://ryosukedtomita.github.io/myblog/posts/book/index.html",
       icon: Book
+    },
+    {
+      name: "AtCoder",
+      url: "https://atcoder.jp/users/HathawayNoa",
+      icon: ExternalLink
     }
   ],
   skills: [
