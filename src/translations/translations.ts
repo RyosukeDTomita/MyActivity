@@ -2,7 +2,7 @@ export const translations = {
   en: {
     profile: {
       name: "Ryosuke Tomita(sigma)",
-      title: "Security Engineer",
+      title: "Software Engineer (Security)",
       description: "Working as a Security Engineer. Involved in SI development/maintenance of authentication infrastructure, security assessments, shift-left security, and promoting generative AI utilization. Privately contributed over 100 technical articles to Qiita and conducted lightning talks at study groups.",
       location: "Tokyo, Japan",
       joinDate: "Active since 2022",
@@ -94,7 +94,7 @@ export const translations = {
   ja: {
     profile: {
       name: "Ryosuke Tomita(sigma)",
-      title: "Security Engineer",
+      title: "Software Engineer (Security)",
       description: "セキュリティエンジニアとして就業中。認証基盤のSI開発/保守、セキュリティ診断、シフトレフトセキュリティ，生成AI活用推進に従事。プライベートではQiitaに100件以上の技術記事を投稿し、勉強会でのLTも実施。",
       location: "Tokyo, Japan",
       joinDate: "Active since 2022",
