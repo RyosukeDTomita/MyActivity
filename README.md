@@ -24,7 +24,6 @@ https://ryosukedtomita.github.io/MyActivity/
 - [Next.js](https://nextjs.org/)
 - TypeScript
 - Tailwind CSS
-- Framer Motion
 - Lucide React
 
 ---

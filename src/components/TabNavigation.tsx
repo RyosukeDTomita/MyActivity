@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 interface Tab {
   id: string;
   label: string;
@@ -30,11 +28,7 @@ export default function TabNavigation({ tabs, activeTab, onTabChange }: TabNavig
             `}
           >
             {activeTab === tab.id && (
-              <motion.div
-                layoutId="activeTab"
-                className="absolute inset-0 bg-blue-600 dark:bg-blue-500 rounded-md"
-                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-              />
+              <span className="absolute inset-0 bg-blue-600 dark:bg-blue-500 rounded-md" />
             )}
             <span className="relative z-10">{tab.label}</span>
           </button>
