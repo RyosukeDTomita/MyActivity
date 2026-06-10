@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from 'react';
 import Image from "next/image";
-import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import { MapPin, Calendar } from "lucide-react";
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/translations/translations';
 import { profileData } from '@/data/profileData';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import TabNavigation from '@/components/TabNavigation';
-import Activities from '@/components/Activities';
+
+// Activitiesタブは初期表示に不要なため遅延読み込みして初期JSを削減
+const Activities = dynamic(() => import('@/components/Activities'));
 
 export default function Home() {
   const { language } = useLanguage();
@@ -45,12 +47,7 @@ export default function Home() {
       <LanguageSwitcher />
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* ヘッダーセクション */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12 animate-fade-in-up">
           <div className="relative w-32 h-32 mx-auto mb-6">
             <Image
               src={profileData.avatar}
@@ -90,7 +87,7 @@ export default function Home() {
               decoding="async"
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* Tab Navigation */}
         <TabNavigation 
@@ -103,27 +100,19 @@ export default function Home() {
         {activeTab === 'profile' ? (
           <>
             {/* SNSリンクセクション */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-12"
-        >
+        <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
             {t.links.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {profileData.links.map((link, index) => (
-              <motion.a
+              <a
                 key={link.name}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.1 * index }}
-                whileHover={{ scale: 1.02, boxShadow: "0 10px 25px rgba(0,0,0,0.1)" }}
-                className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300"
+                style={{ animationDelay: `${0.1 * index}s` }}
+                className="animate-fade-in-scale bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:scale-[1.02] hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center">
                   <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
@@ -138,54 +127,40 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-              </motion.a>
+              </a>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* スキルセクション */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-12"
-        >
+        <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
             {t.skills.title}
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {profileData.skills.map((skill, index) => (
-              <motion.span
+              <span
                 key={skill}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: 0.05 * index }}
-                className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium"
+                style={{ animationDelay: `${0.05 * index}s` }}
+                className="animate-fade-in-scale bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium"
               >
                 {skill}
-              </motion.span>
+              </span>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* 経験セクション */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mb-12"
-        >
+        <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
             {t.experience.title}
           </h2>
           <div className="space-y-6">
             {t.experience.items.map((exp, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
+                style={{ animationDelay: `${0.1 * index}s` }}
+                className="animate-fade-in-left bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
               >
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {exp.title}
@@ -212,10 +187,10 @@ export default function Home() {
                     ))}
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
           </>
         ) : (
@@ -223,16 +198,14 @@ export default function Home() {
         )}
 
         {/* フッター */}
-        <motion.footer
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center pt-8 border-t border-gray-200 dark:border-slate-700"
+        <footer
+          className="animate-fade-in text-center pt-8 border-t border-gray-200 dark:border-slate-700"
+          style={{ animationDelay: '0.8s' }}
         >
           <p className="text-gray-500 dark:text-gray-500 text-sm">
             © 2025 {t.name}. {t.footer}
           </p>
-        </motion.footer>
+        </footer>
       </div>
     </div>
   );

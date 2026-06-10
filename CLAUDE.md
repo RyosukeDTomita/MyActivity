@@ -43,7 +43,7 @@ This project is configured to work with GitHub's pull request system. To test PR
 - Use TypeScript for type safety
 - Follow React/Next.js best practices
 - Maintain responsive design with Tailwind CSS
-- Use Framer Motion for animations consistently
+- Use CSS animations (defined in `globals.css`) consistently; do not add animation libraries such as Framer Motion (kept out to minimize bundle size)
 
 ## Deployment
 

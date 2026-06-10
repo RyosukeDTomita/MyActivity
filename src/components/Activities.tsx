@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Calendar, ExternalLink, Presentation, Podcast, Music, Play, BookOpen, Hash } from 'lucide-react';
 import { ltPresentations, podcastAppearances, techBlogPosts, getYouTubeEmbedUrl } from '@/data/activitiesData';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -11,12 +10,7 @@ export default function Activities() {
   const t = translations[language].profile.activities;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="space-y-8"
-    >
+    <div className="space-y-8 animate-fade-in-up">
       {/* Podcast Appearances Section */}
       <div className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
@@ -25,12 +19,10 @@ export default function Activities() {
         
         <div className="space-y-6">
           {podcastAppearances.map((podcast, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
+              style={{ animationDelay: `${0.1 * index}s` }}
+              className="animate-fade-in-left bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
             >
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                 {podcast.title}
@@ -92,7 +84,7 @@ export default function Activities() {
                   </a>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -107,12 +99,10 @@ export default function Activities() {
           const embedUrl = lt.youtubeUrl ? getYouTubeEmbedUrl(lt.youtubeUrl) : null;
           
           return (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
+              style={{ animationDelay: `${0.1 * index}s` }}
+              className="animate-fade-in-left bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
             >
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 whitespace-pre-line">
                 {lt.title}
@@ -152,6 +142,7 @@ export default function Activities() {
                       <iframe
                         src={embedUrl}
                         title={lt.title}
+                        loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                         className="w-full"
@@ -161,7 +152,7 @@ export default function Activities() {
                   </div>
                 </div>
               )}
-            </motion.div>
+            </div>
           );
         })}
       </div>
@@ -257,12 +248,10 @@ export default function Activities() {
         
         <div className="space-y-6">
           {techBlogPosts.map((post, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
+              style={{ animationDelay: `${0.1 * index}s` }}
+              className="animate-fade-in-left bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
@@ -312,10 +301,10 @@ export default function Activities() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

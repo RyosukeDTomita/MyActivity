@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "sigma profile - Portfolio",
@@ -36,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://ghchart.rshah.org" />
         <link rel="dns-prefetch" href="https://ghchart.rshah.org" />
-        <link rel="preload" href="/MyActivity/images/profile.webp" as="image" type="image/webp" />
+        {/* profile.webpのpreloadはnext/imageのpriorityが自動生成するため手動指定しない */}
         {/* Critical CSS: inline above-the-fold styles to unblock first paint */}
         <style>{`
           body{margin:0;background:#ffffff;color:#171717}
@@ -51,9 +40,7 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         <LanguageProvider>
           {children}
         </LanguageProvider>
