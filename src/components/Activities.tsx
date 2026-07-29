@@ -1,7 +1,7 @@
 'use client';
 
 import { Calendar, ExternalLink, Presentation, Podcast, Music, Play, BookOpen, Hash } from 'lucide-react';
-import { ltPresentations, podcastAppearances, techBlogPosts, getYouTubeEmbedUrl } from '@/data/activitiesData';
+import { ltPresentations, podcastAppearances, techBlogPosts, internalStudySessions, getYouTubeEmbedUrl } from '@/data/activitiesData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/translations/translations';
 
@@ -155,6 +155,45 @@ export default function Activities() {
             </div>
           );
         })}
+      </div>
+
+      {/* Internal Study Sessions Section */}
+      <div className="mb-12 mt-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+          {t.internalStudySessions}
+        </h2>
+
+        <div className="space-y-6">
+          {internalStudySessions.map((session, index) => (
+            <div
+              key={index}
+              style={{ animationDelay: `${0.1 * index}s` }}
+              className="animate-fade-in-left bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
+            >
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                {session.title}
+              </h3>
+
+              <div className="flex items-center text-gray-600 dark:text-gray-400 mb-3">
+                <Calendar className="w-4 h-4 mr-2" />
+                <span className="text-sm">{session.date}</span>
+                {session.time && (
+                  <span className="text-xs ml-2">{session.time}</span>
+                )}
+              </div>
+
+              <a
+                href={session.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                <BookOpen className="w-4 h-4" />
+                <span>Material({session.platform})</span>
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Tech Blog Section */}

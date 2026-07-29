@@ -15,11 +15,15 @@ export const translations = {
           },
           {
             name: "Qiita",
-            description: "Tech Blog (All)"
+            description: "Tech Blog (All) - in Japanese"
+          },
+          {
+            name: "AtCoder",
+            description: "Competitive programming (Haskell)"
           },
           {
             name: "Zenn",
-            description: "Tech Blog (Selected)"
+            description: "Tech Blog (Selected) - English translations"
           },
           {
             name: "Speaker Deck",
@@ -32,10 +36,6 @@ export const translations = {
           {
             name: "Reading History",
             description: "List of books I have read"
-          },
-          {
-            name: "AtCoder",
-            description: "Competitive programming"
           }
         ]
       },
@@ -81,6 +81,7 @@ export const translations = {
       activities: {
         title: "Activities",
         ltPresentations: "Lightning Talks",
+        internalStudySessions: "Internal Study Sessions",
         date: "Date",
         eventPage: "Event Page",
         slides: "Speaker Deck",
@@ -107,11 +108,15 @@ export const translations = {
           },
           {
             name: "Qiita",
-            description: "Tech Blog (All)"
+            description: "技術記事(全記事・日本語)"
+          },
+          {
+            name: "AtCoder",
+            description: "競技プログラミング(Haskell)"
           },
           {
             name: "Zenn",
-            description: "Tech Blog (Selected)"
+            description: "技術記事(抜粋・英訳版)"
           },
           {
             name: "Speaker Deck",
@@ -124,10 +129,6 @@ export const translations = {
           {
             name: "Reading History",
             description: "読んだ本リスト"
-          },
-          {
-            name: "AtCoder",
-            description: "競技プログラミング"
           }
         ]
       },
@@ -173,6 +174,7 @@ export const translations = {
       activities: {
         title: "Activities",
         ltPresentations: "Lightning Talks",
+        internalStudySessions: "社内勉強会",
         date: "実施日",
         eventPage: "Event Page",
         slides: "Speaker Deck",

@@ -1,4 +1,4 @@
-import { Github, Book, ExternalLink, Presentation, Linkedin } from "lucide-react";
+import { Github, Book, BookOpen, BookMarked, Trophy, PenLine, Presentation, Linkedin } from "lucide-react";
 
 export const profileData = {
   avatar: "./images/profile.webp",
@@ -14,14 +14,19 @@ export const profileData = {
       icon: Book
     },
     {
+      name: "AtCoder",
+      url: "https://atcoder.jp/users/HathawayNoa",
+      icon: Trophy
+    },
+    {
       name: "Note",
       url: "https://note.com/sigma5736394841",
-      icon: ExternalLink
+      icon: PenLine
     },
     {
       name: "Zenn",
       url: "https://zenn.dev/sigma_tom",
-      icon: ExternalLink
+      icon: BookOpen
     },
     {
       name: "Speaker Deck",
@@ -36,12 +41,7 @@ export const profileData = {
     {
       name: "Reading History",
       url: "https://ryosukedtomita.github.io/myblog/posts/book/index.html",
-      icon: Book
-    },
-    {
-      name: "AtCoder",
-      url: "https://atcoder.jp/users/HathawayNoa",
-      icon: ExternalLink
+      icon: BookMarked
     }
   ],
   skills: [
