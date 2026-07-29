@@ -4,15 +4,17 @@ This repository contains a Next.js personal portfolio website. Here are the deve
 
 ## Development Setup
 
+0. **Node.js**: Requires Node.js 20.9+ (CI uses 22, see `.github/workflows/deploy.yml`)
 1. **Dependencies**: Run `npm install` to install all required packages
 2. **Development server**: Use `npm run dev` to start the development server
-3. **Build**: Use `npm run build` to create a production build
-4. **Lint**: Use `npm run lint` to check code quality
+3. **Build**: Use `npm run build` to create a production build (static export to `out/`)
+4. **Lint**: Use `npm run lint` to check code quality (Next.js 16で`next lint`が廃止されたためESLint CLIを直接呼ぶ)
 
 ## Key Files
 
 - `src/app/page.tsx` - Main portfolio page with profile configuration
 - `src/app/layout.tsx` - Layout component with metadata
+- `src/components/BrandIcons.tsx` - GitHub/LinkedInのブランドアイコン(lucide-react v1で削除されたためインラインSVGで保持)
 - `public/images/` - Static images directory
 - `README.md` - Project documentation
 

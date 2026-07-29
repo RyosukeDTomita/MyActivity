@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useSyncExternalStore } from 'react';
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { MapPin, Calendar } from "lucide-react";
@@ -16,33 +16,39 @@ const Activities = dynamic(() => import('@/components/Activities'));
 const VALID_TABS = ['profile', 'activities'];
 const DEFAULT_TAB = 'profile';
 
+// location.hashを唯一の状態源として扱う外部ストア。
+// replaceStateはhashchangeを発火しないため、購読者を自前で保持して通知する
+const tabListeners = new Set<() => void>();
+
 const getTabFromHash = () => {
   const hash = window.location.hash.replace('#', '');
   return VALID_TABS.includes(hash) ? hash : DEFAULT_TAB;
 };
 
+const subscribeToTab = (onStoreChange: () => void) => {
+  tabListeners.add(onStoreChange);
+  window.addEventListener('hashchange', onStoreChange);
+  return () => {
+    tabListeners.delete(onStoreChange);
+    window.removeEventListener('hashchange', onStoreChange);
+  };
+};
+
+const setTabHash = (tab: string) => {
+  window.history.replaceState(null, '', `#${tab}`);
+  tabListeners.forEach((listener) => listener());
+};
+
 export default function Home() {
   const { language } = useLanguage();
   const t = translations[language].profile;
-  // 初回レンダーは必ずDEFAULT_TABにする。hashはサーバー側では読めないため、
-  // ここでlocation.hashを見るとSSRのHTMLと食い違いhydration mismatchになる
-  const [activeTab, setActiveTab] = useState(DEFAULT_TAB);
-
-  useEffect(() => {
-    // マウント後にhashを反映する(hydration完了後なので不一致にならない)
-    setActiveTab(getTabFromHash());
-
-    const onHashChange = () => {
-      setActiveTab(getTabFromHash());
-    };
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
-  }, []);
-
-  const handleTabChange = (tab: string) => {
-    setActiveTab(tab);
-    window.history.replaceState(null, '', `#${tab}`);
-  };
+  // hashはサーバー側では読めないため、サーバースナップショットは必ずDEFAULT_TABを返す。
+  // hydration完了後にクライアントスナップショットへ切り替わるのでmismatchにならない
+  const activeTab = useSyncExternalStore(
+    subscribeToTab,
+    getTabFromHash,
+    () => DEFAULT_TAB
+  );
 
   const tabs = [
     { id: 'profile', label: 'Profile' },
@@ -100,7 +106,7 @@ export default function Home() {
         <TabNavigation 
           tabs={tabs}
           activeTab={activeTab}
-          onTabChange={handleTabChange}
+          onTabChange={setTabHash}
         />
 
         {/* Tab Content */}
