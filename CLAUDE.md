@@ -9,6 +9,7 @@ This repository contains a Next.js personal portfolio website. Here are the deve
 2. **Development server**: Use `npm run dev` to start the development server
 3. **Build**: Use `npm run build` to create a production build (static export to `out/`)
 4. **Lint**: Use `npm run lint` to check code quality (Next.js 16で`next lint`が廃止されたためESLint CLIを直接呼ぶ)
+5. **E2E Test**: Use `npm run test:e2e` to run Playwright tests (初回のみ`npx playwright install chromium`が必要)
 
 ## Key Files
 
@@ -16,7 +17,16 @@ This repository contains a Next.js personal portfolio website. Here are the deve
 - `src/app/layout.tsx` - Layout component with metadata
 - `src/components/BrandIcons.tsx` - GitHub/LinkedInのブランドアイコン(lucide-react v1で削除されたためインラインSVGで保持)
 - `public/images/` - Static images directory
+- `e2e/` - Playwright E2Eテスト
 - `README.md` - Project documentation
+
+## E2E Testing
+
+`e2e/language.spec.ts`はProfile/Activitiesの両タブがja/enで描画されることだけを検証する簡易テスト。
+
+- 期待値は`src/translations/translations.ts`から直接importする。文面を編集してもテストは壊れない
+- 言語切り替えボタンは`data-testid="language-switcher"`で参照する
+- `playwright.config.ts`の`webServer`が`npm run dev`を自動起動する。`next.config.ts`の`basePath`があるため、URLは`/MyActivity/`配下(`/`は404)
 
 ## Customization Guide
 
