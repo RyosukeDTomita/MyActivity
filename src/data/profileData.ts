@@ -1,4 +1,5 @@
-import { Github, Book, BookOpen, BookMarked, Trophy, PenLine, Presentation, Linkedin } from "lucide-react";
+import { Book, BookOpen, BookMarked, Trophy, PenLine, Presentation } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "@/components/BrandIcons";
 
 export const profileData = {
   avatar: "./images/profile.webp",
@@ -6,7 +7,7 @@ export const profileData = {
     {
       name: "GitHub",
       url: "https://github.com/RyosukeDTomita",
-      icon: Github
+      icon: GithubIcon
     },
     {
       name: "Qiita",
@@ -36,7 +37,7 @@ export const profileData = {
     {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/tomita-ryosuke-a08a82255/",
-      icon: Linkedin
+      icon: LinkedinIcon
     },
     {
       name: "Reading History",

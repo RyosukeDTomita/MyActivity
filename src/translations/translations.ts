@@ -3,7 +3,7 @@ export const translations = {
     profile: {
       name: "Ryosuke Tomita(sigma)",
       title: "Software Engineer (Security)",
-      description: "Working as a Security Engineer. Involved in SI development/maintenance of authentication infrastructure, security assessments, shift-left security, and promoting generative AI utilization. Privately contributed over 100 technical articles to Qiita and conducted lightning talks at study groups.",
+      description: "Security engineer with experience centered on SI development/maintenance of authentication infrastructure, security assessments, and shift-left security. Currently developing an in-house Spring-based framework. Privately, published over 190 technical articles on Qiita and shares knowledge mainly through study group talks. Current obsession: competitive programming on AtCoder with Haskell.",
       location: "Tokyo, Japan",
       joinDate: "Active since 2022",
       links: {
@@ -96,7 +96,7 @@ export const translations = {
     profile: {
       name: "Ryosuke Tomita(sigma)",
       title: "Software Engineer (Security)",
-      description: "セキュリティエンジニアとして就業中。認証基盤のSI開発/保守、セキュリティ診断、シフトレフトセキュリティ，生成AI活用推進に従事。プライベートではQiitaに100件以上の技術記事を投稿し、勉強会でのLTも実施。",
+      description: "セキュリティエンジニアとして、認証基盤のSI開発/保守、セキュリティ診断、シフトレフトセキュリティを中心に経験。現在はSpringベースの内製フレームワークの開発に従事。プライベートでもQiitaに190件以上の技術記事を投稿したり、勉強会を中心に発信を行う。最近のマイブームはHaskell AtCoder。",
       location: "Tokyo, Japan",
       joinDate: "Active since 2022",
       links: {
