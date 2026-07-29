@@ -1,7 +1,7 @@
 'use client';
 
-import { Calendar, ExternalLink, Presentation, Podcast, Music, Play, BookOpen, Hash } from 'lucide-react';
-import { ltPresentations, podcastAppearances, techBlogPosts, internalStudySessions, getYouTubeEmbedUrl } from '@/data/activitiesData';
+import { Calendar, ExternalLink, Presentation, Podcast, Music, Play, BookOpen, Hash, Trophy } from 'lucide-react';
+import { ltPresentations, podcastAppearances, techBlogPosts, internalStudySessions, atCoderMilestones, getYouTubeEmbedUrl } from '@/data/activitiesData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/translations/translations';
 
@@ -340,6 +340,45 @@ export default function Activities() {
                   </a>
                 </div>
               </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Haskell AtCoder Section */}
+      <div className="mb-12 mt-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+          Haskell AtCoder
+        </h2>
+
+        <div className="space-y-6">
+          {atCoderMilestones.map((milestone, index) => (
+            <div
+              key={index}
+              style={{ animationDelay: `${0.1 * index}s` }}
+              className="animate-fade-in-left bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-slate-700"
+            >
+              <h3 className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <Trophy className="w-5 h-5 text-amber-500" />
+                {milestone.title}
+              </h3>
+
+              <div className="flex items-center text-gray-600 dark:text-gray-400">
+                <Calendar className="w-4 h-4 mr-2" />
+                <span className="text-sm">{milestone.date}</span>
+              </div>
+
+              {milestone.contestUrl && (
+                <a
+                  href={milestone.contestUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-3 text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  <span className="text-sm">{milestone.contestName}</span>
+                  <ExternalLink className="w-4 h-4 shrink-0" />
+                </a>
+              )}
             </div>
           ))}
         </div>

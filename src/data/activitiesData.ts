@@ -26,6 +26,14 @@ export interface TechBlogPost {
   description?: string;
 }
 
+export interface AtCoderMilestone {
+  date: string;
+  title: string;
+  // コンテスト成績証(https://atcoder.jp/users/<user>/history/share/<contest>)
+  contestName?: string;
+  contestUrl?: string;
+}
+
 export interface InternalStudySession {
   date: string;
   time?: string;
@@ -109,6 +117,22 @@ export const ltPresentations: LTPresentation[] = [
 ];
 
 export const techBlogPosts: TechBlogPost[] = [];
+
+// 新しいものが上に来るよう降順で管理する
+export const atCoderMilestones: AtCoderMilestone[] = [
+  {
+    date: "2026/06/27",
+    title: "入茶",
+    contestName: "ABC464",
+    contestUrl: "https://atcoder.jp/users/HathawayNoa/history/share/abc464"
+  },
+  {
+    date: "2025/10/05",
+    title: "初参加",
+    contestName: "ABC344",
+    contestUrl: "https://atcoder.jp/users/HathawayNoa/history/share/abc344"
+  }
+];
 
 export const internalStudySessions: InternalStudySession[] = [
   {

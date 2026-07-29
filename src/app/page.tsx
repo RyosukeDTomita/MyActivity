@@ -13,18 +13,25 @@ import TabNavigation from '@/components/TabNavigation';
 // Activitiesタブは初期表示に不要なため遅延読み込みして初期JSを削減
 const Activities = dynamic(() => import('@/components/Activities'));
 
+const VALID_TABS = ['profile', 'activities'];
+const DEFAULT_TAB = 'profile';
+
+const getTabFromHash = () => {
+  const hash = window.location.hash.replace('#', '');
+  return VALID_TABS.includes(hash) ? hash : DEFAULT_TAB;
+};
+
 export default function Home() {
   const { language } = useLanguage();
   const t = translations[language].profile;
-  const validTabs = ['profile', 'activities'];
-  const getTabFromHash = () => {
-    if (typeof window === 'undefined') return 'profile';
-    const hash = window.location.hash.replace('#', '');
-    return validTabs.includes(hash) ? hash : 'profile';
-  };
-  const [activeTab, setActiveTab] = useState(getTabFromHash);
+  // 初回レンダーは必ずDEFAULT_TABにする。hashはサーバー側では読めないため、
+  // ここでlocation.hashを見るとSSRのHTMLと食い違いhydration mismatchになる
+  const [activeTab, setActiveTab] = useState(DEFAULT_TAB);
 
   useEffect(() => {
+    // マウント後にhashを反映する(hydration完了後なので不一致にならない)
+    setActiveTab(getTabFromHash());
+
     const onHashChange = () => {
       setActiveTab(getTabFromHash());
     };
