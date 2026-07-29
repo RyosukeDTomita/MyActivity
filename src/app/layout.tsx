@@ -4,13 +4,13 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 
 export const metadata: Metadata = {
   title: "sigma profile - Portfolio",
-  description: "セキュリティエンジニアとして活動。Qiitaを中心に技術記事の投稿やLT等の発信にも力を入れている。最近は育児の傍らでHaskellでの競技プログラミングに力を入れている。",
+  description: "セキュリティエンジニアとして、認証基盤のSI開発/保守、セキュリティ診断、シフトレフトセキュリティを中心に経験。現在はSpringベースの内製フレームワークの開発に従事。Qiitaへの技術記事投稿や勉強会での発信も継続中。最近のマイブームはHaskell AtCoder。",
   keywords: "フロントエンド, バックエンド, React, Next.js, TypeScript, ソフトウェアエンジニア",
   authors: [{ name: "sigma profile" }],
   creator: "sigma profile",
   openGraph: {
     title: "sigma profile - Portfolio",
-    description: "セキュリティエンジニアとして活動。Qiitaを中心に技術記事の投稿やLT等の発信にも力を入れている。最近は育児の傍らでHaskellでの競技プログラミングに力を入れている。",
+    description: "セキュリティエンジニアとして、認証基盤のSI開発/保守、セキュリティ診断、シフトレフトセキュリティを中心に経験。現在はSpringベースの内製フレームワークの開発に従事。Qiitaへの技術記事投稿や勉強会での発信も継続中。最近のマイブームはHaskell AtCoder。",
     type: "website",
   },
 };
