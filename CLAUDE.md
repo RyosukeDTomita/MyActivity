@@ -68,3 +68,15 @@ This project is configured for GitHub Pages deployment:
 
 - `.github/workflows/test.yml` - E2E(Playwright)。`pull_request`で実行され、`workflow_call`で`deploy.yml`からも呼ばれる
 - `.github/workflows/deploy.yml` - `test` → `build` → `deploy`の順に実行。E2Eが落ちるとデプロイされない
+
+ワークフローの静的チェックにはaquaで管理した2つのツールを使う(`aqua.yaml`)。
+
+```sh
+aqua i                          # 初回のみ
+aqua exec -- ghalint run        # ワークフローのポリシー違反を検出
+aqua exec -- pinact run --check # actionsがSHA固定されているか検証
+aqua exec -- pinact run -u      # actionsを最新版に更新して再固定
+```
+
+- actionsは`uses: owner/repo@<40桁SHA> # vX.Y.Z`の形で固定する。タグは可変なので直接参照しない
+- `permissions`はワークフロー全体を`{}`にして、各ジョブで必要な権限だけ与える
