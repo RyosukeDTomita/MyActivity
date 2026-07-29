@@ -63,3 +63,8 @@ This project is configured for GitHub Pages deployment:
 - Push to `main` branch for automatic deployment
 - Ensure `next.config.ts` is properly configured for static export
 - Static files are generated in the `out` directory
+
+### CI
+
+- `.github/workflows/test.yml` - E2E(Playwright)。`pull_request`で実行され、`workflow_call`で`deploy.yml`からも呼ばれる
+- `.github/workflows/deploy.yml` - `test` → `build` → `deploy`の順に実行。E2Eが落ちるとデプロイされない

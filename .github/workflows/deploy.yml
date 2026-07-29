@@ -25,7 +25,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # E2Eが通らない限りbuild/deployには進まない
+  test:
+    uses: ./.github/workflows/test.yml
+
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
