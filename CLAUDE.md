@@ -14,9 +14,11 @@ This repository contains a Next.js personal portfolio website. Here are the deve
 ## Key Files
 
 - `src/app/page.tsx` - Main portfolio page with profile configuration
-- `src/app/layout.tsx` - Layout component with metadata
+- `src/app/layout.tsx` - Layout component with metadata(OGP/Twitter Card/canonical/JSON-LD)
+- `src/app/sitemap.ts` - sitemap.xmlの生成
+- `src/data/site.ts` - 公開URL(basePath込み)とOG画像URLの定義
 - `src/components/BrandIcons.tsx` - GitHub/LinkedInのブランドアイコン(lucide-react v1で削除されたためインラインSVGで保持)
-- `public/images/` - Static images directory
+- `public/images/` - Static images directory(`og-image.png`は1200x630のOGP画像)
 - `e2e/` - Playwright E2Eテスト
 - `README.md` - Project documentation
 
@@ -27,6 +29,14 @@ This repository contains a Next.js personal portfolio website. Here are the deve
 - 期待値は`src/translations/translations.ts`から直接importする。文面を編集してもテストは壊れない
 - 言語切り替えボタンは`data-testid="language-switcher"`で参照する
 - `playwright.config.ts`の`webServer`が`npm run dev`を自動起動する。`next.config.ts`の`basePath`があるため、URLは`/MyActivity/`配下(`/`は404)
+
+## SEO
+
+- URLやメタデータの定義箇所は`src/data/site.ts`の`siteUrl`に集約する。`basePath`があるため`metadataBase`は`https://ryosukedtomita.github.io/MyActivity/`(basePath込み)を渡す
+- `src/app/sitemap.ts`には`export const dynamic = "force-static"`が必須。`output: 'export'`では静的であることを明示しないとビルドが失敗する
+- JSON-LD(`Person`)の`sameAs`は`profileData.links`から生成する。リンクを増やしたら自動で反映される
+- **robots.txtは置いていない**。クローラはオリジン直下(`https://ryosukedtomita.github.io/robots.txt`)しか読まないため、`/MyActivity/robots.txt`を置いても無視される。制御が必要ならユーザーサイト側のリポジトリに置く
+- ja/enはクライアント側で切り替えるためURLが同一で、英語版は個別にインデックスされない。hreflangも張れない
 
 ## Customization Guide
 

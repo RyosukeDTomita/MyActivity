@@ -1,18 +1,58 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { profileData } from "@/data/profileData";
+import { translations } from "@/translations/translations";
+import { ogImageUrl, siteUrl } from "@/data/site";
+
+const title = "sigma profile - Portfolio";
+const description = "セキュリティエンジニアとして、認証基盤のSI開発/保守、セキュリティ診断、シフトレフトセキュリティを中心に経験。現在はSpringベースの内製フレームワークの開発に従事。Qiitaへの技術記事投稿や勉強会での発信も継続中。最近のマイブームはHaskell AtCoder。";
 
 export const metadata: Metadata = {
-  title: "sigma profile - Portfolio",
-  description: "セキュリティエンジニアとして、認証基盤のSI開発/保守、セキュリティ診断、シフトレフトセキュリティを中心に経験。現在はSpringベースの内製フレームワークの開発に従事。Qiitaへの技術記事投稿や勉強会での発信も継続中。最近のマイブームはHaskell AtCoder。",
-  keywords: "フロントエンド, バックエンド, React, Next.js, TypeScript, ソフトウェアエンジニア",
+  // 相対URL(canonical/OG画像)の解決基準。basePathを含む絶対URLを渡す
+  metadataBase: new URL(`${siteUrl}/`),
+  title,
+  description,
   authors: [{ name: "sigma profile" }],
   creator: "sigma profile",
-  openGraph: {
-    title: "sigma profile - Portfolio",
-    description: "セキュリティエンジニアとして、認証基盤のSI開発/保守、セキュリティ診断、シフトレフトセキュリティを中心に経験。現在はSpringベースの内製フレームワークの開発に従事。Qiitaへの技術記事投稿や勉強会での発信も継続中。最近のマイブームはHaskell AtCoder。",
-    type: "website",
+  alternates: {
+    canonical: "./",
   },
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    url: `${siteUrl}/`,
+    siteName: title,
+    locale: "ja_JP",
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [ogImageUrl],
+  },
+};
+
+// 氏名検索でのリッチな表示を狙うPersonスキーマ。
+// sameAsのURLはprofileDataから引き、リンク一覧と二重管理にしない
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: translations.ja.profile.name,
+  jobTitle: translations.ja.profile.title,
+  description: translations.ja.profile.description,
+  url: `${siteUrl}/`,
+  image: ogImageUrl,
+  sameAs: profileData.links.map((link) => link.url),
 };
 
 export default function RootLayout({
@@ -41,6 +81,10 @@ export default function RootLayout({
         `}</style>
       </head>
       <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <LanguageProvider>
           {children}
         </LanguageProvider>
