@@ -136,6 +136,13 @@ export const atCoderMilestones: AtCoderMilestone[] = [
 
 export const internalStudySessions: InternalStudySession[] = [
   {
+    date: "2026/08/05",
+    time: "12:00-13:00",
+    title: "Haskellでクラウドネイティブに挑戦する~musl静的バイナリをk3sで動かしてみた〜",
+    platform: "Qiita",
+    url: "https://qiita.com/sigma_devsecops/items/a8ef33ddc89ec319fc0f"
+  },
+  {
     date: "2026/05/14",
     time: "17:00-18:00",
     title: "関数型プログラミングを知らない人向けに、「Haskellって何が面白いの?」と聞かれた時の回答",
