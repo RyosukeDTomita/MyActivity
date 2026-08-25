@@ -34,6 +34,14 @@ export interface AtCoderMilestone {
   contestUrl?: string;
 }
 
+export interface Session {
+  date: string;
+  title: string;
+  eventName?: string;
+  eventUrl: string;
+  slideUrl: string;
+}
+
 export interface InternalStudySession {
   date: string;
   time?: string;
@@ -82,6 +90,17 @@ export const podcastAppearances: PodcastAppearance[] = [
       spotify: "https://open.spotify.com/episode/1bEnIamRjXVpCFMOebS0CK",
       youtube: "https://www.youtube.com/watch?v=4zHdDy07j2c"
     }
+  }
+];
+
+// 新しいものが上に来るよう降順で管理する
+export const sessions: Session[] = [
+  {
+    date: "2026/08/28",
+    title: "なぜ、Haskellは美しいと言われるのか?",
+    eventName: "Netadashi Meetup #17",
+    eventUrl: "https://peatix.com/event/5095532",
+    slideUrl: "https://ryosukedtomita.github.io/Slidev/2026-08-28/"
   }
 ];
 
